@@ -1,22 +1,21 @@
-# Config file for automatic testing at travis-ci.org
-# This file will be regenerated if you run travis_pypi_setup.py
+# Travis configuration file based on https://docs.travis-ci.com/user/languages/python/
+# Read more under http://docs.travis-ci.com/user/build-configuration/
+# THIS SCRIPT IS SUPPOSED TO BE AN EXAMPLE. MODIFY IT ACCORDING TO YOUR NEEDS!
 
 language: python
-python: 3.5
-
-env:
-  - TOXENV=py35
-  - TOXENV=py34
-  - TOXENV=py33
-  - TOXENV=py27
-  - TOXENV=py26
-  - TOXENV=pypy
-
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox
-
-# command to run tests, e.g. python setup.py test
-script: tox -e ${TOXENV}
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+install:
+  - pip install -U pip
+  - pip install -U pytest pytest-cov
+  - pip install numpy scipy pandas cython coverage coveralls
+  - pip install -r requirements.txt
+script:
+  - python setup.py test
+after_success:
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "3.6" ]]; then coveralls || echo "failed"; fi
 
 {% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}
 # After you create the Github repo and add it to Travis, run the
@@ -30,5 +29,5 @@ deploy:
   on:
     tags: true
     repo: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-    condition: $TOXENV == py27
+    condition: $TRAVIS_PYTHON_VERSION == 3.6
 {%- endif %}
