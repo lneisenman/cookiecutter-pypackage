@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -7,6 +6,9 @@ test_{{ cookiecutter.project_slug }}
 
 Tests for `{{ cookiecutter.project_slug }}` module.
 """
+
+from __future__ import (print_function, division, absolute_import,
+                        unicode_literals)
 
 {% if cookiecutter.use_pytest == 'y' -%}
 import pytest
@@ -26,21 +28,8 @@ from {{ cookiecutter.project_slug }} import cli
 
 
 {% if cookiecutter.use_pytest == 'y' -%}
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
-
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument.
-    """
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
-
+def test_{{ cookiecutter.project_slug }}():
+    assert 1 == 1   # this should pass
 
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 def test_command_line_interface():
