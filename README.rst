@@ -14,9 +14,9 @@ Cookiecutter_ template for a Python package based on audreyr's cookiecutter-pypa
 Features
 --------
 
-* Testing setup with ``pytest``
+* Testing setup with pytest_
 * Travis-CI_: Ready for Travis Continuous Integration testing
-* Appveyor: Ready for Appveyor Continuous Integration testing
+* Appveyor_: Ready for Appveyor Continuous Integration testing
 * Tox_ testing: Setup to easily test for Python 2.7, 3.5, 3.6
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
 * Bumpversion_: Pre-configured version bumping with a single command
@@ -55,14 +55,14 @@ Then:
 
 * Create the corresponding repo in Github.
 * Add the repo to your Travis-CI_ account.
-* Add the repo to your Appveyor account.
-* Add the repo to your Coveralls account.
-* `Git init`
-* `Git add .`
-* `Git commit -m "Initial commit"`
+* Add the repo to your Appveyor_ account.
+* Add the repo to your Coveralls_ account.
+* ``Git init``
+* ``Git add .``
+* ``Git commit -m "Initial commit"``
 * follow the instructions from Github to point your local repo to Github and push your repo
 * Update the badges
-* Run the script `travis_pypi_setup.py` to encrypt your PyPI password in Travis config
+* Run the script ``travis_pypi_setup.py`` to encrypt your PyPI password in Travis config
   and activate automated deployment on PyPI when you push a new tag to master branch. (Optional)
 * Add the repo to your ReadTheDocs_ account + turn on the ReadTheDocs service hook.
 * Release your package by pushing a new tag to master.
@@ -73,6 +73,9 @@ For more details, see the `cookiecutter-pypackage tutorial`_.
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _`cookiecutter-pypackage tutorial`: https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html
+.. _pytest: http://docs.pytest.org
+.. _Appveyor: https://ci.appveyor.com/
+.. _Coveralls: https://coveralls.io/
 .. _Travis-CI: http://travis-ci.org/
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
