@@ -10,7 +10,6 @@ Cookiecutter_ template for a Python package based on audreyr's cookiecutter-pypa
 * Documentation: https://cookiecutter-pypackage.readthedocs.io/
 * Free software: BSD license
 
-.. _`cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 
 Features
 --------
@@ -71,6 +70,13 @@ Then:
 
 For more details, see the `cookiecutter-pypackage tutorial`_.
 
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _`cookiecutter-pypackage tutorial`: https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html
-
+.. _Travis-CI: http://travis-ci.org/
+.. _Tox: http://testrun.org/tox/
+.. _Sphinx: http://sphinx-doc.org/
+.. _ReadTheDocs: https://readthedocs.io/
+.. _Bumpversion: https://github.com/peritus/bumpversion
+.. _PyPi: https://pypi.python.org/pypi
 
