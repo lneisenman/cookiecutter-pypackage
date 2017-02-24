@@ -26,6 +26,24 @@
 * Documentation: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io.
 {% endif %}
 
+Quickstart
+----------
+
+These instructions assume you have just completed creating a repo with cookiecutter and have cd'ed into the repo
+
+
+* Create the corresponding repo in Github.
+* Add the repo to your Travis-CI_ account.
+* Add the repo to your Appveyor account.
+* Add the repo to your Coveralls account.
+* `Git init`
+* `Git add .`
+* `Git commit -m "Initial commit"`
+* follow the instructions from Github to point your local repo to Github and push your repo
+* Update the badges
+* Delete these instructions from this file.
+
+
 Features
 --------
 
