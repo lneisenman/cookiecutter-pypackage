@@ -1,0 +1,13 @@
+pip
+bumpversion
+wheel
+watchdog
+flake8
+tox
+coverage
+Sphinx
+{% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}
+cryptography==1.7
+PyYAML==3.11{% endif %}
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest{%- endif %}
