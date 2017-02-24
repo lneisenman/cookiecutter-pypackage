@@ -7,8 +7,8 @@
 .. image:: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
         :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
-.. image:: https://ci.appveyor.com/api/projects/status/liiq6hget4c6etug?svg=true
-        :target: https://ci.appveyor.com/api/projects/status/liiq6hget4c6etug
+.. image:: https://ci.appveyor.com/api/projects/status/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?svg=true
+        :target: https://ci.appveyor.com/api/projects/status/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/branch/master
 
 .. image:: https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/badge.svg?branch=master
         :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
@@ -34,8 +34,8 @@ These instructions assume you have just completed creating a repo with cookiecut
 
 * Create the corresponding repo in Github.
 * Add the repo to your Travis-CI_ account.
-* Add the repo to your Appveyor account.
-* Add the repo to your Coveralls account.
+* Add the repo to your Appveyor_ account.
+* Add the repo to your Coveralls_ account.
 * `Git init`
 * `Git add .`
 * `Git commit -m "Initial commit"`
@@ -57,3 +57,6 @@ This package was created with Cookiecutter_ and the `lneisenman/cookiecutter-pyt
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`lneisenman/cookiecutter-python`: https://github.com/lneisenman/cookiecutter-python
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _Appveyor: https://ci.appveyor.com/
+.. _Coveralls: https://coveralls.io/
+.. _Travis-CI: http://travis-ci.org/
