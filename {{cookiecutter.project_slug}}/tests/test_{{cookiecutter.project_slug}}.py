@@ -21,7 +21,7 @@ from contextlib import contextmanager
 from click.testing import CliRunner
 {%- endif %}
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}_fcn
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 from {{ cookiecutter.project_slug }} import cli
 {%- endif %}
@@ -29,7 +29,7 @@ from {{ cookiecutter.project_slug }} import cli
 
 {% if cookiecutter.use_pytest == 'y' -%}
 def test_{{ cookiecutter.project_slug }}():
-    assert {{ cookiecutter.project_slug }}()   # this should pass
+    assert {{ cookiecutter.project_slug }}_fcn()   # this should pass
 
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 def test_command_line_interface():

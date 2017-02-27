@@ -4,5 +4,5 @@ from __future__ import (print_function, division, absolute_import,
                         unicode_literals)
 
 
-def {{ cookiecutter.project_slug }}():
+def {{ cookiecutter.project_slug }}_fcn():
     return True
