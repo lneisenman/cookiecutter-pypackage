@@ -29,7 +29,7 @@ from {{ cookiecutter.project_slug }} import cli
 
 {% if cookiecutter.use_pytest == 'y' -%}
 def test_{{ cookiecutter.project_slug }}():
-    assert 1 == 1   # this should pass
+    assert {{ cookiecutter.project_slug }}()   # this should pass
 
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 def test_command_line_interface():
